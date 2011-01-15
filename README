@@ -1,0 +1,8 @@
+#####  command lines to commit to github ######
+git status -s
+??: untracked
+A: added for tracking
+M: modified
+git commit -m 'comments'
+git remote add origin git@github.com:hesumi/uwpython-win.git
+git push origin master
