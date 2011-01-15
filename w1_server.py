@@ -16,6 +16,7 @@ s.listen(backlog) 			#  and listen
 while True: 
     client, address = s.accept()
     data = client.recv(size)
+    print data
     if data: 
 	if data == 'kill':		# gracious termination
 	    client.send('bye')
