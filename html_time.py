@@ -17,4 +17,5 @@ lst.append('</pre>')
 lst.append('</body>')
 lst.append('</html>')
 
+##########   dump the html doc to stdout ###########
 print '\n'.join(lst)
