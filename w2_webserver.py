@@ -23,7 +23,7 @@ mime_types = {'.jpg' : 'image/jpg',
              '.png' : 'image/png',
              '.html' : 'text/html', 
              '.pdf' : 'application/pdf',
-             '.py' : 'application/py'}
+             '.py' : 'application/py'}      # added '.py' type
 response = {}
 
 response[200] =\
