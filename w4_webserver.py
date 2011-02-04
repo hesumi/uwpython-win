@@ -102,7 +102,7 @@ def get_content(uri):
 	print 'fetching:', uri
 
 	##### Week4 Assignment query? #####
-	if uri.find('/execute_py/week4?') != -1:
+	if uri.find('/execute_py/jsonout?') != -1:
 		s_n1 = uri[(uri.find('a=')+2):uri.find('&')]
 		s_n2 = uri[(uri.find('b=')+2):].strip()
 		print 'INPUT= a: '+s_n1+',\t'+'b: '+s_n2
