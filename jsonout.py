@@ -13,18 +13,11 @@ class Jsonout(object):
 
 	def __repr__(self):
 		ADD_NUMS =\
-		"""<html>
-<head><title>Add Result</title></head>
-<body>
-<pre>
-{
+"""{
 	"result": %s,
 	"uwnetid": "hesumi",
 	"time": %s
-}
-</pre>
-</body>
-</html>"""
+}"""
 
 		s_n = str(int(self.s_n1) + int(self.s_n2))	# calucurate "num1 + num2"
 		s_time = str(time.time())					# current time in float

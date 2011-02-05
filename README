@@ -1,4 +1,4 @@
-##### Feb. 3, 2011: Week4 Homework ######
+##### Feb. 4, 2011: Week4 Homework ######
 1) w4_webserver.py: main webserver program
 2) jsonout.py: takes variables and performs addition, then return result in JSON format
 sample URL is below:

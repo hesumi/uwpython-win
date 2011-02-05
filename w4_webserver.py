@@ -118,7 +118,7 @@ def get_content(uri):
 		
 		rst = child_proc.stdout.read()		# get output of 'jsonout.py'
 		print 'OUTPUT=\\\n'+rst
-		return (200, 'text/html', rst)
+		return (200, 'text/plain', rst)
 		
 	else:
 		try:
