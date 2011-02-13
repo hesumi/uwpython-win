@@ -1,3 +1,10 @@
+
+##### Feb. 12, 2011: Week5 Homework ######
+1) w5_booklist.py: main webserver program
+2) w5_cherrypy.conf: CherryPy config file
+3) bookdb.py:  Book List dictionary
+access URL is blow:
+http://block115387-yvm.blueboxgrid.com:8080/
 ##### Feb. 6, 2011: Week4 Homework ver.2 ######
 1) w4_webserver2.py: main webserver program
 2) jsonout2.py: takes variables and performs addition, then return result in JSON format
@@ -28,3 +35,6 @@ git commit -m 'comments'
 <remote operation commands>
 git remote add origin git@github.com:hesumi/uwpython-win.git
 git push origin master         #passphrase: esmesm99
+
+##### git download from briandorsey/uwpython_web ######
+git clone git://github.com/briandorsey/uwpython_web.git
