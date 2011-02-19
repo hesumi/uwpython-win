@@ -1,4 +1,8 @@
-
+##### Feb. 18, 2011: Week6 Homework ######
+1) w6_mysite.tar.gz: compressed archive file of 'mysite' tree
+access URLs are below:
+http://block115387-yvm.blueboxgrid.com:8000/polls/
+http://block115387-yvm.blueboxgrid.com:8000/admin/
 ##### Feb. 12, 2011: Week5 Homework ######
 1) w5_booklist.py: main webserver program
 2) w5_cherrypy.conf: CherryPy config file
