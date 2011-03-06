@@ -1,3 +1,10 @@
+##### Mar. 6, 2011: Week8 Homework ######
+1) w8_project.tar.gz: compressed archive file of "booklist" project+app folders
+2) w8_templates.tar.gz: compressed archive file of "booklist" templates
+3) w8_mysqldump: plain text file of "mysqldump -u root w8assign"
+access URLs are below:
+http://block115387-yvm.blueboxgrid.com:8080/admin/
+http://block115387-yvm.blueboxgrid.com:8080/booklist/
 ##### Feb. 27, 2011: Week7 Homework ######
 1) w7_project.tar.gz: compressed archive file of "booklist" project+app folders
 2) w7_templates.tar.gz: compressed archive file of "booklist" templates

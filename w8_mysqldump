@@ -1,0 +1,434 @@
+-- MySQL dump 10.13  Distrib 5.1.41, for debian-linux-gnu (i486)
+--
+-- Host: localhost    Database: w8booklist
+-- ------------------------------------------------------
+-- Server version	5.1.41-3ubuntu12.7
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `auth_group`
+--
+
+DROP TABLE IF EXISTS `auth_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group`
+--
+
+LOCK TABLES `auth_group` WRITE;
+/*!40000 ALTER TABLE `auth_group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_group_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_group_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `group_id` (`group_id`,`permission_id`),
+  KEY `auth_group_permissions_425ae3c4` (`group_id`),
+  KEY `auth_group_permissions_1e014c8f` (`permission_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group_permissions`
+--
+
+LOCK TABLES `auth_group_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_group_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_message`
+--
+
+DROP TABLE IF EXISTS `auth_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `message` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `auth_message_403f60f` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_message`
+--
+
+LOCK TABLES `auth_message` WRITE;
+/*!40000 ALTER TABLE `auth_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_permission`
+--
+
+DROP TABLE IF EXISTS `auth_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `content_type_id` int(11) NOT NULL,
+  `codename` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `content_type_id` (`content_type_id`,`codename`),
+  KEY `auth_permission_1bb8f392` (`content_type_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_permission`
+--
+
+LOCK TABLES `auth_permission` WRITE;
+/*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
+INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add message',4,'add_message'),(11,'Can change message',4,'change_message'),(12,'Can delete message',4,'delete_message'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add site',7,'add_site'),(20,'Can change site',7,'change_site'),(21,'Can delete site',7,'delete_site'),(22,'Can add book',8,'add_book'),(23,'Can change book',8,'change_book'),(24,'Can delete book',8,'delete_book'),(25,'Can add author',9,'add_author'),(26,'Can change author',9,'change_author'),(27,'Can delete author',9,'delete_author'),(28,'Can add publisher',10,'add_publisher'),(29,'Can change publisher',10,'change_publisher'),(30,'Can delete publisher',10,'delete_publisher'),(31,'Can add log entry',11,'add_logentry'),(32,'Can change log entry',11,'change_logentry'),(33,'Can delete log entry',11,'delete_logentry');
+/*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user`
+--
+
+DROP TABLE IF EXISTS `auth_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(75) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `is_staff` tinyint(1) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `is_superuser` tinyint(1) NOT NULL,
+  `last_login` datetime NOT NULL,
+  `date_joined` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user`
+--
+
+LOCK TABLES `auth_user` WRITE;
+/*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
+INSERT INTO `auth_user` VALUES (1,'hesumi','','','email@toshiesumi.com','sha1$20bfb$9aeb287957f6e99cd6275ab00338f5536f856281',1,1,1,'2011-03-06 11:41:17','2011-03-03 20:55:29');
+/*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_groups`
+--
+
+DROP TABLE IF EXISTS `auth_user_groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`,`group_id`),
+  KEY `auth_user_groups_403f60f` (`user_id`),
+  KEY `auth_user_groups_425ae3c4` (`group_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_groups`
+--
+
+LOCK TABLES `auth_user_groups` WRITE;
+/*!40000 ALTER TABLE `auth_user_groups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_user_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_user_user_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_user_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`,`permission_id`),
+  KEY `auth_user_user_permissions_403f60f` (`user_id`),
+  KEY `auth_user_user_permissions_1e014c8f` (`permission_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_user_permissions`
+--
+
+LOCK TABLES `auth_user_user_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_user_user_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_user_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `booklist_author`
+--
+
+DROP TABLE IF EXISTS `booklist_author`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `booklist_author` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_n` varchar(32) NOT NULL,
+  `first_n` varchar(32) NOT NULL,
+  `middle_n` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booklist_author`
+--
+
+LOCK TABLES `booklist_author` WRITE;
+/*!40000 ALTER TABLE `booklist_author` DISABLE KEYS */;
+INSERT INTO `booklist_author` VALUES (1,'Holden','Steve',''),(2,'Martelli','Alex',''),(3,'Ravenscroft','Anna',''),(4,'Ascher','David',''),(5,'Hetland','Magnus','Lie'),(6,'Campbell','Jennifer',''),(7,'Gries','Paul',''),(8,'Montojo','Jason',''),(9,'Wilson','Greg',''),(10,'Beazley','David','M.'),(11,'Lutz','Mark',''),(12,'Summerfield','Mark',''),(13,'Dawson','Michael',''),(14,'Ceder','Vern',''),(15,'Alchin','Marty',''),(16,'Barry','Paul','');
+/*!40000 ALTER TABLE `booklist_author` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `booklist_author_book`
+--
+
+DROP TABLE IF EXISTS `booklist_author_book`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `booklist_author_book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author_id` int(11) NOT NULL,
+  `book_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `author_id` (`author_id`,`book_id`),
+  KEY `booklist_author_book_337b96ff` (`author_id`),
+  KEY `booklist_author_book_752eb95b` (`book_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booklist_author_book`
+--
+
+LOCK TABLES `booklist_author_book` WRITE;
+/*!40000 ALTER TABLE `booklist_author_book` DISABLE KEYS */;
+INSERT INTO `booklist_author_book` VALUES (1,1,1),(3,3,2),(4,4,3),(5,2,2),(6,2,3),(8,6,5),(9,7,5),(10,8,5),(11,9,5),(12,10,6),(14,12,8),(15,13,9),(16,14,10),(17,15,11),(18,5,4),(19,5,12),(20,16,13),(21,11,14),(22,11,7);
+/*!40000 ALTER TABLE `booklist_author_book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `booklist_book`
+--
+
+DROP TABLE IF EXISTS `booklist_book`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `booklist_book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) NOT NULL,
+  `edition` varchar(16) NOT NULL,
+  `isbn10` varchar(10) NOT NULL,
+  `pub_date` date NOT NULL,
+  `publisher_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `booklist_book_22dd9c39` (`publisher_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booklist_book`
+--
+
+LOCK TABLES `booklist_book` WRITE;
+/*!40000 ALTER TABLE `booklist_book` DISABLE KEYS */;
+INSERT INTO `booklist_book` VALUES (1,'Python Web Programming','first','0735710902','2002-01-18',1),(2,'Python Cookbook','second','0596007973','2005-03-18',2),(3,'Python in a Nutshell','second','0596100469','2006-07-14',2),(4,'Beginning Python: From Novice to Professional ','second','1590599829','2008-09-19',3),(5,'Practical Programming: An Introduction to Computer Science Using Python','first','1934356271','2009-03-28',4),(6,'Python Essential Reference','fourth','0672329786','2009-07-19',5),(7,'Learning Python: Powerful Object-Oriented Programming','fourth','0596158068','2009-10-02',2),(8,'Programming in Python 3: A Complete Introduction to the Python Language','second','0321680561','2009-11-22',5),(9,'Python Programming for the Absolute Beginner','third','1435455002','2010-01-01',6),(10,'The Quick Python Book','second','193518220X','2010-01-15',7),(11,'Pro Python ','first','1430227575','2010-06-15',3),(12,'Python Algorithms: Mastering Basic Algorithms in the Python Language ','first','1430232374','2010-11-24',3),(13,'Head First Python','first','1449382673','2010-11-30',2),(14,'Programming Python','fourth','0596158106','2010-12-31',2);
+/*!40000 ALTER TABLE `booklist_book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `booklist_publisher`
+--
+
+DROP TABLE IF EXISTS `booklist_publisher`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `booklist_publisher` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `booklist_publisher`
+--
+
+LOCK TABLES `booklist_publisher` WRITE;
+/*!40000 ALTER TABLE `booklist_publisher` DISABLE KEYS */;
+INSERT INTO `booklist_publisher` VALUES (1,'Sams'),(2,'O\'Reilly Media'),(3,'Apress'),(4,'Pragmatic Bookshelf'),(5,'Addison-Wesley Professional'),(6,'Course Technology PTR'),(7,'Manning Publications');
+/*!40000 ALTER TABLE `booklist_publisher` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_admin_log`
+--
+
+DROP TABLE IF EXISTS `django_admin_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_admin_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action_time` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content_type_id` int(11) DEFAULT NULL,
+  `object_id` longtext,
+  `object_repr` varchar(200) NOT NULL,
+  `action_flag` smallint(5) unsigned NOT NULL,
+  `change_message` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `django_admin_log_403f60f` (`user_id`),
+  KEY `django_admin_log_1bb8f392` (`content_type_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_admin_log`
+--
+
+LOCK TABLES `django_admin_log` WRITE;
+/*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+/*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_content_type`
+--
+
+DROP TABLE IF EXISTS `django_content_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_content_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `app_label` varchar(100) NOT NULL,
+  `model` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `app_label` (`app_label`,`model`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_content_type`
+--
+
+LOCK TABLES `django_content_type` WRITE;
+/*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
+INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'message','auth','message'),(5,'content type','contenttypes','contenttype'),(6,'session','sessions','session'),(7,'site','sites','site'),(8,'book','booklist','book'),(9,'author','booklist','author'),(10,'publisher','booklist','publisher'),(11,'log entry','admin','logentry');
+/*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_session`
+--
+
+DROP TABLE IF EXISTS `django_session`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_session` (
+  `session_key` varchar(40) NOT NULL,
+  `session_data` longtext NOT NULL,
+  `expire_date` datetime NOT NULL,
+  PRIMARY KEY (`session_key`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_session`
+--
+
+LOCK TABLES `django_session` WRITE;
+/*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
+INSERT INTO `django_session` VALUES ('3ad93353570b850db4b93768c8811fdf','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLmFhNjZhNmVhZDY5MjVlYTIyZDY0OWEwZDVh\nZDhkMjA1\n','2011-03-17 21:57:07'),('5995d46a351d50c2fab33205088d510a','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLmFhNjZhNmVhZDY5MjVlYTIyZDY0OWEwZDVh\nZDhkMjA1\n','2011-03-17 22:03:02'),('755c2660ab6ad34af0fd34548f249d49','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLmFhNjZhNmVhZDY5MjVlYTIyZDY0OWEwZDVh\nZDhkMjA1\n','2011-03-17 22:08:46'),('f4e84e125e8942d297a3069eba1c54f6','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-19 00:14:49'),('f28235b6b4b04479f097143838a42025','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k\ncy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEEigEBdS40M2U4OTcyNzg0MDg4Zjk5YTUy\nNGI3MWFiYWZhNzZiOQ==\n','2011-03-17 22:10:02'),('56c4f5ef469905f43922b8037912c750','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-19 10:07:23'),('6f3b524ddebb364f66c3d560ace10220','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-19 10:07:25'),('7c572735ebf19cd808c2f01c08aa349b','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-19 10:07:27'),('ffb527c5efd674213cb09dd31cc50401','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:29:28'),('8ebb58d4457e05d5a63c8d19dfc75483','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:31:03'),('6b5119a3b5bc6e3886d67d8b93857346','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:31:34'),('78a359c3635d1010c73717777d174a62','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:31:38'),('59ce6db76ac6569e71c4f6c0d58a9876','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:31:41'),('f19f355e0c20ab11b37f8ae02443e59a','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:31:45'),('d6889b8f67eca9fb4dfa8b280ef1ccca','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:31:48'),('a797279afdb68747261496550e1ca6e1','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:33:11'),('4083e0333f0e0261a6faf8e5a128f76b','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:37:44'),('33190c0015d0d896edb29b4ca0f18094','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:39:41'),('8a3dd0c477903f245423d0743d75a84f','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:39:48'),('01028b743240157024ea2a174cf16ebf','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:40:08'),('36926f39e0f762eb33dc663f6fbf14df','gAJ9cQEuNzRmNGUzZGRiZDgyMjljZWI3YzQwZmE0Y2E2NGE1ZjA=\n','2011-03-20 11:40:27'),('d91b13e55a5505f3a42c5b7338ad0741','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k\ncy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEEigEBdS40M2U4OTcyNzg0MDg4Zjk5YTUy\nNGI3MWFiYWZhNzZiOQ==\n','2011-03-20 11:41:17');
+/*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_site`
+--
+
+DROP TABLE IF EXISTS `django_site`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_site` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `domain` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_site`
+--
+
+LOCK TABLES `django_site` WRITE;
+/*!40000 ALTER TABLE `django_site` DISABLE KEYS */;
+INSERT INTO `django_site` VALUES (1,'example.com','example.com');
+/*!40000 ALTER TABLE `django_site` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2011-03-06 22:25:06
