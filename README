@@ -51,7 +51,7 @@ git commit -m 'comments'
 
 <remote operation commands>
 git remote add origin git@github.com:hesumi/uwpython-win.git
-git push origin master         #passphrase: esmesm99
+git push origin master 
 
 ##### git download from briandorsey/uwpython_web ######
 git clone git://github.com/briandorsey/uwpython_web.git
