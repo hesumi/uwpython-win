@@ -1,0 +1,297 @@
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` ORDER BY `booklist_book`.`title` ASC
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 6
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 1
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 7
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 4
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 4
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 13
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 13
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 7
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 7
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 5
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 11
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 11
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 8
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 8
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 8
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 8
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 14
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 14
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 12
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 12
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 2
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 6
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 6
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 3
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 9
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 9
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 6
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 1
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 1
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 1
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 1
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 1
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 1
+
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`id` = 10
+    
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` INNER JOIN `booklist_author_book` ON (`booklist_author`.`id` = `booklist_author_book`.`author_id`) WHERE `booklist_author_book`.`book_id` = 10
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 7
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` ORDER BY `booklist_author`.`last_n` ASC
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 15
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 15
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 4
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 4
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 16
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 16
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 10
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 10
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 6
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 6
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 14
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 14
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 7
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 13
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 13
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 6
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 7
+Line    Method  File
+25  author  /home/hesumi/projects/w8assign/booklist/views.py
+0.81    SELECT
+EXPLAIN
+    
+Toggle Stacktrace
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 7
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 5
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 5
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 1
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 1
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 1
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 11
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 11
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 2
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 8
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 8
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 3
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 12
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 12
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+
+SELECT `booklist_author`.`id`, `booklist_author`.`last_n`, `booklist_author`.`first_n`, `booklist_author`.`middle_n` FROM `booklist_author` WHERE `booklist_author`.`id` = 9
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` INNER JOIN `booklist_author_book` ON (`booklist_book`.`id` = `booklist_author_book`.`book_id`) WHERE `booklist_author_book`.`author_id` = 9
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` ORDER BY `booklist_publisher`.`name` ASC
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 5
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 3
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 6
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 6
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 6
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 7
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 7
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 7
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 2
+
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 4
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 4
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 1
+    
+SELECT `booklist_book`.`id`, `booklist_book`.`title`, `booklist_book`.`edition`, `booklist_book`.`isbn10`, `booklist_book`.`pub_date`, `booklist_book`.`publisher_id` FROM `booklist_book` WHERE `booklist_book`.`publisher_id` = 1
+    
+SELECT `booklist_publisher`.`id`, `booklist_publisher`.`name` FROM `booklist_publisher` WHERE `booklist_publisher`.`id` = 1
