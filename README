@@ -1,4 +1,11 @@
-##### Mar. 6, 2011: Week8 Homework ######
+##### Mar. 13, 2011: Week9 Homework ######
+I couldn't complete it. I'm still not sure about:
+a) what kind of format Kind.gql("WHERE list_property = :1", self.key()) returns
+b) how to handle the return at a template
+c) and so on
+The zipped tar file: w8_gae_app.tar.gz contains working-progress app_files for week8's book list project, intended to run on Google App Engine SDK.
+
+#### Mar. 6, 2011: Week8 Homework ######
 1) w8_project.tar.gz: compressed archive file of "booklist" project+app folders
 2) w8_templates.tar.gz: compressed archive file of "booklist" templates
 3) w8_mysqldump: plain text file of "mysqldump -u root w8assign"
